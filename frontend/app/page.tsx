@@ -1,3 +1,4 @@
+import UploadCard from "../components/UploadCard";
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center">
@@ -11,9 +12,7 @@ export default function Home() {
         buying intent, objections, and conversion probability using AI.
       </p>
 
-      <button className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl text-lg font-semibold transition">
-        Upload Audio
-      </button>
+     <UploadCard />
 
     </main>
   );
