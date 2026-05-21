@@ -1,3 +1,4 @@
+from services.transcribe import transcribe_audio
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 import shutil
@@ -26,7 +27,9 @@ async def upload_audio(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
+    transcript = transcribe_audio(file_path)
+
     return {
-        "filename": file.filename,
-        "message": "Audio uploaded successfully"
-    }
+    "filename": file.filename,
+    "transcript": transcript
+}
