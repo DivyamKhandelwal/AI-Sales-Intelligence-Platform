@@ -1,3 +1,4 @@
+from services.analyze import analyze_sales_call
 from services.transcribe import transcribe_audio
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
@@ -28,8 +29,10 @@ async def upload_audio(file: UploadFile = File(...)):
         shutil.copyfileobj(file.file, buffer)
 
     transcript = transcribe_audio(file_path)
+    analysis = "AI analysis temporarily unavailable."
 
     return {
     "filename": file.filename,
-    "transcript": transcript
+    "transcript": transcript,
+    "analysis": analysis
 }

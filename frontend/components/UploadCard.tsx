@@ -7,7 +7,8 @@ export default function UploadCard() {
 
   const [file, setFile] = useState<File | null>(null);
   const [message, setMessage] = useState("");
-
+  const [transcript, setTranscript] = useState("");
+  const [analysis, setAnalysis] = useState("");
   const handleUpload = async () => {
 
     if (!file) {
@@ -28,6 +29,8 @@ export default function UploadCard() {
       console.log(response.data);
 setMessage("Audio uploaded successfully");
 
+setTranscript(response.data.transcript);
+setAnalysis(response.data.analysis);
     } catch (error) {
       console.error(error);
       setMessage("Upload failed");
@@ -75,6 +78,32 @@ setMessage("Audio uploaded successfully");
           {message}
         </p>
       )}
+      {transcript && (
+  <div className="mt-6 bg-slate-800 p-4 rounded-xl">
+
+    <h3 className="text-xl font-semibold mb-2">
+      AI Transcript
+    </h3>
+
+    <p className="text-gray-300 leading-7">
+      {transcript}
+    </p>
+
+  </div>
+)}
+{analysis && (
+  <div className="mt-6 bg-slate-900 border border-slate-700 p-6 rounded-2xl">
+
+    <h3 className="text-2xl font-bold mb-4 text-blue-400">
+      AI Sales Analysis
+    </h3>
+
+    <div className="text-gray-300 leading-8 whitespace-pre-line">
+      {analysis}
+    </div>
+
+  </div>
+)}
 
     </div>
   );
