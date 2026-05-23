@@ -74,8 +74,8 @@ AI-Sales-Intelligence/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone [https://github.com/YOUR_USERNAME/YOUR_REPO.git](https://github.com/DivyamKhandelwal/AI-Sales-Intelligence-Platform
+cd AI-Sales-Intelligence-Platform
 ```
 
 ---
