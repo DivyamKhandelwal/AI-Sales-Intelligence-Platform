@@ -203,17 +203,6 @@ This project demonstrates:
 
 ---
 
-# 📸 Recommended GitHub Improvements
-
-## Add Real Screenshots
-
-Replace placeholder image with:
-- dashboard screenshot
-- transcript view
-- AI analysis section
-
----
-
 # 🤝 Contributing
 
 Pull requests are welcome.
@@ -222,18 +211,12 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ---
 
-# 📜 License
-
-MIT License
-
----
-
 # 👨‍💻 Author
 
 **Divyam Khandelwal**
 
-- GitHub: https://github.com/YOUR_USERNAME
-- LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+- GitHub: https://github.com/DivyamKhandelwal
+- LinkedIn: https://www.linkedin.com/in/divyam-khandelwal/
 
 ---
 
